@@ -6,6 +6,7 @@ import cv2
 from capture_image import capture_image
 from face_recognition import faces_size
 
+# the path of opencv pre-trained file
 xml_path = "/usr/local/lib/python2.7/dist-packages/cv2/data/haarcascade_frontalface_default.xml"
 limit = 222
 
@@ -22,5 +23,6 @@ while True:
             print face_size
             width, height = face_size
             if width > limit or height > limit:
+                # todo: change to alert window
                 print "you are too close to screen!"
     time.sleep(1)
